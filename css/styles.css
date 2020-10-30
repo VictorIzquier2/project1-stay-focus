@@ -94,9 +94,20 @@ h1{
 
 .container{
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   height: 90vh;
+}
+
+@media(max-width:640px){
+  .container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 1rem;
+    height: 85vh;
+  }
 }
 
 #asideLeft{
@@ -107,9 +118,30 @@ h1{
   align-items: center;
   width: 35vw;
 }
+@media(max-width:640px){
+  #asideLeft{
+    align-self: center;
+    flex-direction: row;
+    width: 90%;
+    height: 30vh;
+  }
+}
 #asideLeft > h2 {
   font-size: 12rem;
   margin: 1.5rem auto;
+}
+@media(max-width: 640px){
+  #asideLeft h1{
+    width: 40vw;
+  }
+  #asideLeft > h2{
+    font-size:9rem;
+    width: 30vw;
+  }
+
+  #asideLeft table{
+    width: 30vw;
+  }
 }
 #asideLeft table tbody tr td{
   font-size: 2rem;
@@ -121,6 +153,11 @@ h1{
   width: 30vw;
   max-height: 90vh;
 }
+@media(max-width: 640px){
+  #main{
+    transform: rotate(90deg);
+  }
+}
 #main img {
   background-repeat: no-repeat;
   position: absolute;
@@ -129,6 +166,16 @@ h1{
   margin-top: 1rem;
   border-radius: 10%;
   box-shadow: 10px 10px 14px 28px rgba(248,248,248,1);
+}
+@media(max-width:640px){
+  #main img {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 #frame {
   width: 100%;
@@ -162,6 +209,16 @@ h1{
 #mobile-menu tbody tr td{
   font-size: 3rem;
 }
+@media(max-width:640px){
+  #mobile-menu tbody tr td{
+    transform: rotate(-90deg);
+  }
+}
+@media(max-width:520px){
+  #mobile-menu tbody tr td{
+    font-size: 2rem;
+  }
+}
 #mobile-menu tbody tr td a{
   color: grey;
 }
@@ -171,6 +228,12 @@ h1{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media(max-width: 640px){
+  #asideRight{
+    flex-direction: row;
+    width: 67%;
+  }
 }
 #stall{
   margin: 1rem auto;
