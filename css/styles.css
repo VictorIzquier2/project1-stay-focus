@@ -1,0 +1,189 @@
+/* General */
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700");
+:root {
+  --background-color: #f5f5f5;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Roboto Condensed;
+  font-size: 0.6 rem;
+  font-weight: 300;
+  line-height: 3.5rem;
+}
+table{
+  font-family: Roboto Condensed;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+/* Icons */
+
+.fa-github {
+  color:#49A5FF;
+}
+.fa-codepen {
+  color: black;
+}
+.fa-linkedin {
+  color: #0073b1;
+}
+.fa-html5 {
+  color: #e44d26;
+}
+.fa-css3 {
+  color:#2965f1;
+}
+.fa-js {
+  color: #fbde34;
+}
+.fa-trello{
+  color: #0084d1;
+}
+.fa-stack-overflow {
+  color: #f58025;
+}
+.fa-book {
+  color: #b11d21;
+}
+.fa-slack {
+  color: #d91d57;
+}
+.fa-whatsapp {
+  color: #1ad03f;
+}
+.fa-telegram {
+  color: #2da1d3;
+}
+.fa-facebook {
+  color: #1873eb;
+}
+.fa-twitter {
+  color: #00a7e6;
+}
+.fa-instagram {
+  color: #c5386b;
+}
+.fa-youtube {
+  color: #f60000;
+}
+.fa-code{
+  color: #50a8ba;
+}
+.fa-figma {
+  color: #f76e5f;
+}
+.fa-user-astronaut{
+  color: orange;
+  border-radius: 50%;
+  box-shadow: 10px 10px 14px 28px rgba(248,248,248,1);
+}
+/* Main */
+
+.container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#asideLeft{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 35vw;
+}
+#asideLeft > h2 {
+  font-size: 12rem;
+  margin: 1.5rem auto;
+}
+#asideLeft table tbody tr td{
+  font-size: 2rem;
+  text-align: center;
+}
+
+#main {
+  position: relative;
+  width: 30vw;
+  max-height: 95vh;
+}
+#main img {
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 30vw;
+  max-height: 95vh;
+  border-radius: 10%;
+  box-shadow: 10px 10px 14px 28px rgba(248,248,248,1);
+}
+#frame {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#frame table{
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+
+}
+#mobile-menu tbody{
+  height: 63vw;
+  max-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#mobile-menu tbody tr {
+  display: flex;
+  justify-content: space-around;
+}
+#mobile-menu tbody tr td{
+  font-size: 3rem;
+}
+#mobile-menu tbody tr td a{
+  color: grey;
+}
+#asideRight {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#stall{
+  margin: 1rem auto;
+  width: 33%;
+}
+#stall th{
+  font-size: 2rem;
+}
+#stall tbody tr td{
+  font-size: 2rem;
+  margin: 1rem;
+}
+#seize{
+  margin: 1rem auto;
+  width: 33%;
+}
+#seize th{
+  font-size: 2rem;
+}
+#seize tbody tr td{
+  font-size: 2rem;
+  margin: 1rem;
+}
