@@ -18,12 +18,13 @@
         <tbody>
           <tr>
             <td><i class="far fa-clock"></i></td>
-            <td>00:00:00</td>
+            <td><span id="hourDec">0</span><span id="hourUni">0</span><span>:<span id="minDec">0</span><span id="minUni">0</span><span>:<span id="secDec">0</span><span id="secUni">0</span></td>
           </tr>
           <tr>
             <td><i class="fas fa-hourglass-half"></i></td>
-            <td>00:00:00</td>
+            <td><span id="hourDecWasted">0</span><span id="hourUniWasted">0</span><span>:<span id="minDecWasted">0</span><span id="minUniWasted">0</span><span>:<span id="secDecWasted">0</span><span id="secUniWasted">0</span></td>
           </tr>
+          <h3 id="order"></h3>
         </tbody>
       </table>
     </aside>
@@ -64,23 +65,23 @@
         <tbody>
           <tr>
             <td><i class="fab fa-facebook"></i></td>
-            <td>0</td>
+            <td id="time-facebook" class="min">0</td>
           </tr>
           <tr>
             <td><i class="fab fa-twitter"></i></td>
-            <td>0</td>
+            <td id="time-twitter" class="min">0</td>
           </tr>
           <tr>
             <td><i class="fab fa-instagram"></i></td>
-            <td>0</td>
+            <td id="time-instagram" class="min">0</td>
           </tr>
           <tr>
             <td><i class="fab fa-youtube"></i></td>
-            <td>0</td>
+            <td id="time-youtube" class="min">0</td>
           </tr>
           <tr>
             <td><i class="fab fa-tiktok"></i></td>
-            <td>0</td>
+            <td id="time-tiktok" class="min">0</td>
           </tr>
         </tbody>
       </table>
@@ -91,23 +92,23 @@
         <tbody>
           <tr>
             <td><i class="fas fa-code"></i></td>
-            <td>0</td>
+            <td id="time-code" class="min">0</td>
           </tr>
           <tr>
             <td><i class="fab fa-github"></i></td>
-            <td>0</td>
+            <td id="time-github" class="min">0</td>
           </tr>
           <tr>
             <td><i class="fab fa-codepen"></i></td>
-            <td>0</td>
+            <td id="time-codepen" class="min">0</td>
           </tr>
           <tr>
             <td><i class="fab fa-figma"></i></td>
-            <td>0</td>
+            <td id="time-figma" class="min">0</td>
           </tr>
           <tr>
             <td><i class="fab fa-linkedin"></i></td>
-            <td>0</td>
+            <td id="time-linkedin" class="min">0</td>
           </tr>
         </tbody>
       </table>
@@ -115,5 +116,6 @@
   </div>
 </body>
 <script src="./js/all.js"></script>
+<script src="./js/timing.js"></script>
 <script src="./js/index.js"></script>
 </html>

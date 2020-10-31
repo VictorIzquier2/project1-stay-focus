@@ -130,12 +130,20 @@ h1{
   font-size: 12rem;
   margin: 1.5rem auto;
 }
+#asideLeft h3 {
+  font-family: Roboto Condensed;
+  font-size: 2rem;
+  margin: 0.5rem;
+  color: orange;
+  
+}
 @media(max-width: 640px){
   #asideLeft h1{
     width: 40vw;
+    font-size: 2.5rem;
   }
   #asideLeft > h2{
-    font-size:9rem;
+    font-size:8rem;
     width: 30vw;
   }
 
@@ -147,11 +155,17 @@ h1{
   font-size: 2rem;
   text-align: center;
 }
+@media(max-width: 640px){
+  #asideLeft table tbody tr td{
+    font-size: 1.5rem;
+  }
+}
 
 #main {
   position: relative;
   width: 30vw;
-  max-height: 90vh;
+  max-width: 360px;
+  max-height: 75vh;
 }
 @media(max-width: 640px){
   #main{
@@ -160,10 +174,10 @@ h1{
 }
 #main img {
   background-repeat: no-repeat;
-  position: absolute;
+  position: relative;
   width: 30vw;
-  max-height: 90vh;
-  margin-top: 1rem;
+  max-width: 360px;
+  max-height: 75vh;
   border-radius: 10%;
   box-shadow: 10px 10px 14px 28px rgba(248,248,248,1);
 }
@@ -178,29 +192,45 @@ h1{
   }
 }
 #frame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-#frame table{
-  width: 90%;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin-top: 1re;
-  z-index: 10;
-
+  #frame table{
+    position: relative;
+    width: 90%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    border-radius: 7%;
+    background-image: url('../images/Fondo-pantalla.jpg');
+    background-size: cover;
+  }
+  @media(max-width:640px){
+    #frame table{
+      margin: 0;
+    }
+  }
+  #mobile-menu tbody{
+    height: 58vw;
+    max-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
-#mobile-menu tbody{
-  height: 63vw;
-  max-height: 95vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+@media(max-width: 640px){
+  #mobile-menu tbody{
+    flex-direction: column-reverse;
+  }
 }
 #mobile-menu tbody tr {
   display: flex;
@@ -209,16 +239,21 @@ h1{
 #mobile-menu tbody tr td{
   font-size: 3rem;
 }
+#mobile-menu tbody tr td .fa-codepen {
+  color: whitesmoke;
+}
 @media(max-width:640px){
   #mobile-menu tbody tr td{
     transform: rotate(-90deg);
-  }
-}
-@media(max-width:520px){
-  #mobile-menu tbody tr td{
     font-size: 2rem;
   }
 }
+@media(min-width:992px){
+  #mobile-menu tbody tr td{
+    font-size: 4.5rem;
+  }
+}
+
 #mobile-menu tbody tr td a{
   color: grey;
 }
