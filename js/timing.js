@@ -9,6 +9,7 @@ class Timing{
       callbackFunction();
     }, 1000);
   }
+
   getHours(){
     return Math.floor(this.currentTime / 3600);
   }
@@ -18,6 +19,7 @@ class Timing{
   getSeconds(){
     return this.currentTime - this.getMinutes() * 60;
   }
+
   twoDigitsNumber(number) {
     // ... your code goes here
     if(number < 10){
@@ -25,5 +27,8 @@ class Timing{
     }else if(number >= 10){
       return `${number}`;
     }
+  }
+  stopTiming(){
+    clearInterval(this.intervalId);
   }
 }

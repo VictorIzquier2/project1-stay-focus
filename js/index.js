@@ -1,81 +1,66 @@
+// Contadores
+const workTime = new Timing();
+const wastedTime = new Timing();
+const checkWhereIs = new Check();
 
 window.onload = () =>{
-  const timing = new Timing();
-
   // Declaración de Variables
-  let min = document.querySelectorAll('.min');
-
+  
+  // Contador productivo
   let hourDec = document.querySelector('#hourDec');
   let hourUni = document.querySelector('#hourUni');
   let minDec = document.querySelector('#minDec');
   let minUni = document.querySelector('#minUni');
   let secDec = document.querySelector('#secDec');
   let secUni = document.querySelector('#secUni');
-
+  
+  // Contador improductivo
   let hourDecWasted = document.querySelector('#hourDecWasted');
   let hourUniWasted = document.querySelector('#hourUniWasted');
   let minDecWasted = document.querySelector('#minDecWasted');
   let minUniWasted = document.querySelector('#minUniWasted');
   let secDecWasted = document.querySelector('#secDecWasted');
   let secUniWasted = document.querySelector('#secUniWasted');
-
-  let timeFacebook = document.querySelector('#time-facebook');
-  let timeTwitter = document.querySelector('#time-twitter');
-  let timeInsta = document.querySelector('#time-instagram');
-  let timeYoutube = document.querySelector('#time-youtube');
-  let timeTiktok = document.querySelector('#time-tiktok');
-
-  let timeCode = document.querySelector('#time-code');
-  let timeGithub = document.querySelector('#time-github');
-  let timeCodepen = document.querySelector('#time-codepen');
-  let timeFigma = document.querySelector('#time-figma');
-  let timeLinkedin = document.querySelector('#time-linkedin');
-
-  function printWorkTime(){
-    printWorkHours();
-    printWorkMinutes();
-    printWorkSeconds();
-  }
-  function printWorkHours(){
-    hourUni.innerText = timing.twoDigitsNumber(timing.getHours())[1];
-    hourDec.innerText = timing.twoDigitsNumber(timing.getHours())[0];
-  }
-  function printWorkMinutes(){
-    minUni.innerText = timing.twoDigitsNumber(timing.getMinutes())[1];
-    minDec.innerText = timing.twoDigitsNumber(timing.getMinutes())[0];
-  }
-  function printWorkSeconds(){
-    secUni.innerText = timing.twoDigitsNumber(timing.getSeconds())[1];
-    secDec.innerText = timing.twoDigitsNumber(timing.getSeconds())[0];
-  }
-  function printWastedTime(){
-    printWastedHours();
-    printWastedMinutes();
-    printWastedSeconds();
-  }
-    function printWastedHours(){
-    hourUniWasted.innerText = timing.twoDigitsNumber(timing.getHours())[1];
-    hourDecWasted.innerText = timing.twoDigitsNumber(timing.getHours())[0];
-  }
-  function printWastedMinutes(){
-    minUniWasted.innerText = timing.twoDigitsNumber(timing.getMinutes())[1];
-    minDecWasted.innerText = timing.twoDigitsNumber(timing.getMinutes())[0];
-  }
-  function printWastedSeconds(){
-    secUniWasted.innerText = timing.twoDigitsNumber(timing.getSeconds())[1];
-    secDecWasted.innerText = timing.twoDigitsNumber(timing.getSeconds())[0];
-  }
-
+  
+  // Contador de Apps recompensables
+  let minDecCode = document.querySelector('#minDecCode');
+  let minUniCode = document.querySelector('#minUniCode');
+  let minDecGith = document.querySelector('#minDecGith');
+  let minUniGith = document.querySelector('#minUniGith');
+  let minDecCodp = document.querySelector('#minDecCodp');
+  let minUniCodp = document.querySelector('#minUniCodp');
+  let minDecFigm = document.querySelector('#minDecFigm');
+  let minUniFigm = document.querySelector('#minUniFigm');
+  let minDecLkin = document.querySelector('#minDecLkin');
+  let minUniLkin = document.querySelector('#minUniLkin');  
+  
+  // Contador Apps penalizables
+  let minDecFace = document.querySelector('#minDecFace');
+  let minUniFace = document.querySelector('#minUniFace');
+  let minDecTwit = document.querySelector('#minDecTwit');
+  let minUniTwit = document.querySelector('#minUniTwit');
+  let minDecInst = document.querySelector('#minDecInst');
+  let minUniInst = document.querySelector('#minUniInst');
+  let minDecYout = document.querySelector('#minDecYout');
+  let minUniYout = document.querySelector('#minUniYout');
+  let minDecTtok = document.querySelector('#minDecTtok');
+  let minUniTtok = document.querySelector('#minUniTtok');
+  
   window.addEventListener('focus', () =>{
     let order = document.getElementById('order');
     order.innerText = "Let's go!";
+    workTime.stopTiming();
+    wastedTime.startTiming(printWastedTime);
   });
-
+  
   window.addEventListener('blur', () =>{
-    console.log('blured!');
-    timing.startTiming(printWastedTime);
-
+    wastedTime.stopTiming();
+    workTime.startTiming(printWorkTime);
   });
 }
-
-
+    window.addEventListener('pageshow', () =>{
+        function whereIsUser() {
+          return window.location.href;
+        }
+        checkWhereIs.starTiming(whereIsUser);
+    });
