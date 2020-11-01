@@ -19,10 +19,12 @@ h6 {
   font-family: Roboto Condensed;
   font-size: 0.6 rem;
   font-weight: 300;
+  color: #3f3f3f;
   line-height: 3.5rem;
 }
 table{
   font-family: Roboto Condensed;
+  color: #2f2f2f;
 }
 
 h1{
@@ -30,15 +32,32 @@ h1{
 }
 
 /* Icons */
-
+.fa-google{
+  color: #f1b500;
+}
+.fa-bootstrap{
+  color: #533b78;
+}
+.fa-react{
+  color: #5ed3f3;
+}
 .fa-github {
   color:#49A5FF;
+}
+.fa-github:hover{
+  cursor: pointer;
 }
 .fa-codepen {
   color: black;
 }
+.fa-codepen:hover {
+  cursor: pointer;
+}
 .fa-linkedin {
   color: #0073b1;
+}
+.fa-linkedin {
+  cursor: pointer;
 }
 .fa-html5 {
   color: #e44d26;
@@ -70,25 +89,77 @@ h1{
 .fa-facebook {
   color: #1873eb;
 }
+.fa-facebook:hover {
+  cursor: pointer;
+}
 .fa-twitter {
   color: #00a7e6;
+}
+.fa-twitter {
+  cursor: pointer;
 }
 .fa-instagram {
   color: #c5386b;
 }
+.fa-instagram:hover {
+  cursor: pointer;
+}
 .fa-youtube {
   color: #f60000;
+}
+.fa-youtube:hover {
+  cursor: pointer;
+}
+.fa-tiktok:hover{
+  cursor: pointer;
 }
 .fa-code{
   color: #50a8ba;
 }
+.fa-code:hover{
+  cursor: pointer;
+}
 .fa-figma {
   color: #f76e5f;
+}
+.fa-figma:hover {
+  cursor: pointer;
+}
+.fa-times-circle{
+  display: none;
+  color: red;
+}
+.fa-times-circle:hover{
+  cursor: pointer;
+}
+.fa-user-clock{
+  color:#3f3f3f;
+  border-radius: 50%;
+  box-shadow: 10px 10px 14px 28px rgba(248,248,248,1);
 }
 .fa-user-astronaut{
   color: orange;
   border-radius: 50%;
   box-shadow: 10px 10px 14px 28px rgba(248,248,248,1);
+  display: none;
+}
+.fa-smile{
+  color: gold;
+  border-radius: 50%;
+  box-shadow: 10px 10px 14px 28px rgba(248,248,248,1);
+  display: none;
+}
+.fa-meh{
+  color: darkseagreen;
+  border-radius: 50%;
+  box-shadow: 10px 10px 14px 28px rgba(248,248,248,1);
+  display: none;
+}
+.fa-poo{
+  color: darkgoldenrod;
+  border-radius: 50%;
+  box-shadow: 10px 10px 14px 28px rgba(248,248,248,1);
+  display: none;
 }
 /* Main */
 
@@ -179,7 +250,6 @@ h1{
   max-width: 360px;
   max-height: 75vh;
   border-radius: 10%;
-  box-shadow: 10px 10px 14px 28px rgba(248,248,248,1);
 }
 @media(max-width:640px){
   #main img {
@@ -271,24 +341,34 @@ h1{
   }
 }
 #stall{
-  margin: 1rem auto;
-  width: 33%;
+  margin: 1rem;
+  width: 30vw;
 }
 #stall th{
   font-size: 2rem;
+  width: 30vw;
+}
+#stall tbody tr{
+  display: flex;
 }
 #stall tbody tr td{
+  display: flex;
   font-size: 2rem;
-  margin: 1rem;
+  width: 15vw;
 }
 #seize{
-  margin: 1rem auto;
-  width: 33%;
+  margin: 1rem;
+  width: 30vw;
 }
 #seize th{
   font-size: 2rem;
+  width: 30vw;
+}
+#seize tbody tr{
+  display: flex;
 }
 #seize tbody tr td{
+  display:flex;
   font-size: 2rem;
-  margin: 1.2rem;
+  width: 15vw;
 }

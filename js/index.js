@@ -1,7 +1,18 @@
 // Contadores
 const workTime = new Timing();
 const wastedTime = new Timing();
-const checkWhereIs = new Check();
+
+const facebookTime = new Timing();
+const twitterTime = new Timing();
+const instagramTime = new Timing();
+const youtubeTime = new Timing();
+const tiktokTime = new Timing();
+
+const codeTime = new Timing();
+const githubTime = new Timing();
+const codepenTime = new Timing();
+const figmaTime = new Timing();
+const linkedinTime = new Timing();
 
 window.onload = () =>{
   // Declaración de Variables
@@ -21,6 +32,7 @@ window.onload = () =>{
   let minUniWasted = document.querySelector('#minUniWasted');
   let secDecWasted = document.querySelector('#secDecWasted');
   let secUniWasted = document.querySelector('#secUniWasted');
+  
   
   // Contador de Apps recompensables
   let minDecCode = document.querySelector('#minDecCode');
@@ -46,21 +58,251 @@ window.onload = () =>{
   let minDecTtok = document.querySelector('#minDecTtok');
   let minUniTtok = document.querySelector('#minUniTtok');
   
+  // Enlaces a webs
+  let enlaceFacebook = document.querySelector('.fa-facebook');
+  let enlaceTwitter = document.querySelector('.fa-twitter');
+  let enlaceInstagram = document.querySelector('.fa-instagram');
+  let enlaceYoutube = document.querySelector('.fa-youtube');
+  let enlaceTiktok = document.querySelector('.fa-tiktok');
+  
+  let enlaceCode = document.querySelector('.fa-code');
+  let enlaceGithub = document.querySelector('.fa-github');
+  let enlaceCodepen = document.querySelector('.fa-codepen');
+  let enlaceFigma = document.querySelector('.fa-figma');
+  let enlaceLinkedin = document.querySelector('.fa-linkedin');
+  
+  // Logos Stall
+  const logoFacebook = document.querySelector('.fa-facebook');
+  const quitFacebook = document.querySelector('#quitFacebook');
+  const logoTwitter = document.querySelector('.fa-twitter');
+  const quitTwitter = document.querySelector('#quitTwitter');
+  const logoInstagram = document.querySelector('.fa-instagram');
+  const quitInstagram = document.querySelector('#quitInstagram');
+  const logoYoutube = document.querySelector('.fa-youtube');
+  const quitYoutube = document.querySelector('#quitYoutube');
+  const logoTiktok = document.querySelector('.fa-tiktok');
+  const quitTikok = document.querySelector('#quitTiktok');
+
+  // Logos Seize
+  const logoCode = document.querySelector('.fa-code');
+  const quitCode = document.querySelector('#quitCode');
+  const logoGithub = document.querySelector('.fa-github');
+  const quitGithub = document.querySelector('#quitGithub');
+  const logoCodepen = document.querySelector('.fa-codepen');
+  const quitCodepen = document.querySelector('#quitCodepen');
+  const logoFigma = document.querySelector('.fa-figma');
+  const quitFigma = document.querySelector('#quitFigma');
+  const logoLinkedin = document.getElementsByClassName('.fa-linkedin');
+  const quitLinkedin = document.querySelector('#quitLinkedin');
+
+  // Status
+  const user = document.querySelector('.fa-user-clock');
+  const astronaut = document.querySelector('.fa-user-astronaut');
+  const smile = document.querySelector('.fa-smile');
+  const meh = document.querySelector('.fa-meh');
+  const poo = document.querySelector('.fa-poo');
+  let slurp = document.getElementById('order');
+  
+  // Mostrar el status
+
+  function printStatus(){
+    if(workTime.currentTime === 0 && wastedTime.currentTime === 0){
+      showUser();
+    }
+    else if(workTime.currentTime > 3600 && workTime.currentTime > wastedTime.currentTime * 12){
+      showAstronaut();    
+    }
+    else if(workTime.currentTime > wastedTime.currentTime * 12){
+      showSmile();
+    }else if(workTime.currenTime <= wastedTime.Time * 12 && workTime.currentTime > wastedTime.currentTime * 4){
+      showMeh();
+    }else if(workTime.currentTime <= wastedTime.currentTime * 4){
+      showPoo();
+    }
+  }
+  // User
+  function showUser(){
+    smile.style.display = 'none';
+    meh.style.display = 'none';
+    poo.style.display = 'none';
+    astronaut.stle.display = 'none';
+    user.style.display = 'block';
+  }
+
+  // astronaut
+  function showAstronaut(){
+    user.style.display = 'none';
+    smile.style.display = 'none';
+    meh.style.display = 'none';
+    poo.style.display = 'none';
+    astronaut.style.display = 'block';
+    slurp.innerText = "exploring the unknown..";
+  }
+  // Smile
+  function showSmile(){
+    user.style.display = 'none';
+    astronaut.style.display = 'none';
+    meh.style.display = 'none';
+    poo.style.display = 'none';
+    smile.style.display = 'block';
+    slurp.innerText = "doing you best";
+  }
+  // Meh
+  function showMeh(){
+    user.style.display = 'none';
+    astronaut.style.display = 'none';
+    smile.style.display = 'none';
+    poo.style.display = 'none';
+    meh.style.display = 'block';
+    slurp.innerText = "let's go!";
+  }
+
+  // Poo
+  function showPoo(){
+    user.style.display = 'none';
+    astronaut.style.display = 'none';
+    smile.style.display = 'none';
+    meh.style.display = 'none';
+    poo.style.display = 'block';
+    slurp.innerText = "being in the shit!";
+  }
+
+  // Event Focus
+
   window.addEventListener('focus', () =>{
-    let order = document.getElementById('order');
-    order.innerText = "Let's go!";
     workTime.stopTiming();
-    wastedTime.startTiming(printWastedTime);
+    wastedTime.stopTiming();
+    printStatus();
   });
+
+  // Event Blur
   
   window.addEventListener('blur', () =>{
-    wastedTime.stopTiming();
-    workTime.startTiming(printWorkTime);
+    if(typeof openedFacebook === 'undefined' && typeof openedTwitter === 'undefined' && typeof openedInstagram === 'undefined' && typeof openedYoutube === 'undefined' && typeof openedTiktok === 'undefined' && typeof openedCode){
+      workTime.stopTiming();
+      workTime.startTiming(printWorkTime);
+      wastedTime.stopTiming();
+    }else if(typeof openedFacebook === 'object' || typeof openedTwitter === 'object' || typeof openedInstagram === 'object' || typeof openedYoutube === 'object' || typeof openedTiktok === 'object'){
+      workTime.stopTiming();
+      wastedTime.stopTiming();
+      wastedTime.startTiming(printWastedTime);
+      }
+      printStatus();
+  });
+
+  // Event pageshow
+  window.addEventListener('pageshow', () =>{
+    enlaceFacebook.addEventListener('click', () => {
+      openFacebook();
+      quitFacebook.style.display = 'block';
+      facebookTime.stopTiming();
+      facebookTime.startTiming(printFacebookMin);
+    });
+    quitFacebook.addEventListener('click', ()=>{
+      closeFacebook();
+      facebookTime.stopTiming();
+      quitFacebook.style.display = 'none';
+    });
+    enlaceTwitter.addEventListener('click', () => {
+      openTwitter();
+      quitTwitter.style.display = 'block';
+      twitterTime.stopTiming();
+      twitterTime.startTiming(printTwitterMin);
+    });
+    quitTwitter.addEventListener('click', ()=>{
+      closeTwitter();
+      twitterTime.stopTiming();
+      quitTwitter.style.display = 'none';
+    });
+    enlaceInstagram.addEventListener('click', () => {
+      openInstagram();
+      quitInstagram.style.display = 'block';
+      instagramTime.stopTiming();
+      instagramTime.startTiming(printInstagramMin);
+    });
+    quitInstagram.addEventListener('click', ()=>{
+      closeInstagram();
+      instagramTime.stopTiming();
+      quitInstagram.style.display = 'none';
+    });
+    enlaceYoutube.addEventListener('click', () => {
+      openYoutube();
+      quitYoutube.style.display = 'block';
+      youtubeTime.stopTiming();
+      youtubeTime.startTiming(printYoutubeMin);
+    });
+    quitYoutube.addEventListener('click', ()=>{
+      closeYoutube();
+      youtubeTime.stopTiming();
+      quitYoutube.style.display = 'none';
+    });
+    enlaceTiktok.addEventListener('click', () => {
+      openTiktok();
+      quitTiktok.style.display = 'block';
+      tiktokTime.stopTiming();
+      tiktokTime.startTiming(printTiktokMin);
+    });
+    quitTiktok.addEventListener('click', ()=>{
+      closeTiktok();
+      tiktokTime.stopTiming();
+      quitTiktok.style.display = 'none';
+    });
+    enlaceCode.addEventListener('click', () => {
+      openCode();
+      quitCode.style.display = 'block';
+      codeTime.stopTiming();
+      codeTime.startTiming(printCodeMin);
+    });
+    quitCode.addEventListener('click', () =>{
+      closeCode();
+      codeTime.stopTiming();
+      quitCode.style.display = 'none';
+    });
+    enlaceGithub.addEventListener('click', () => {
+      openGithub();
+      quitGithub.style.display = 'block';
+      githubTime.stopTiming();
+      githubTime.startTiming(printGithubMin);
+    });
+    quitGithub.addEventListener('click', () =>{
+      closeGithub();
+      githubTime.stopTiming();
+      quitGithub.style.display = 'none';
+    });
+    
+    enlaceCodepen.addEventListener('click', () => {
+      openCodepen();
+      quitCodepen.style.display = 'block';
+      codepenTime.stopTiming();
+      codepenTime.startTiming(printCodepenMin);
+    });
+    quitCodepen.addEventListener('click', () =>{
+      closeCodepen();
+      codepenTime.stopTiming();
+      quitCodepen.style.display = 'none';
+    });
+    enlaceFigma.addEventListener('click', () => {
+      openFigma();
+      quitFigma.style.display = 'block';
+      figmaTime.stopTiming();
+      figmaTime.startTiming(printFigmaMin);
+    });
+    quitFigma.addEventListener('click', () =>{
+      closeFigma();
+      figmaTime.stopTiming();
+      quitFigma.style.display = 'none';
+    });
+    enlaceLinkedin.addEventListener('click', () => {
+      openLinkedin();
+      quitLinkedin.style.display = 'block';
+      linkedinTime.stopTiming();
+      linkedinTime.startTiming(printLinkedinMin);
+    });
+    quitLinkedin.addEventListener('click', () =>{
+      closeLinkedin();
+      linkedinTime.stopTiming();
+      quitLinkedin.style.display = 'none';
+    });
+    printStatus();
   });
 }
-    window.addEventListener('pageshow', () =>{
-        function whereIsUser() {
-          return window.location.href;
-        }
-        checkWhereIs.starTiming(whereIsUser);
-    });
