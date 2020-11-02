@@ -196,7 +196,8 @@ window.onload = () =>{
     }
     if(workTime.currentTime >= 14400 && workTime.currentTime < 18000){
       getStar(star4);
-    }if(workTime.currenTime >= 18000 && workTime.currentTime < 21600){
+    }
+    if(workTime.currentTime >= 18000 && workTime.currentTime < 21600){
       getStar(star5);
     }
   }
@@ -204,9 +205,10 @@ window.onload = () =>{
     const allStars = document.querySelector('.stars');
     allStars.style.display = 'none';
   }
-
+  
   // Medal of Honor
   const medal = document.querySelector('#medalOfHonor');
+  const award = document.querySelector('#award');
   
   
   function showBronzeMedal(){
@@ -219,7 +221,7 @@ window.onload = () =>{
   function showGoldMedal(){
     medal.style.color = '#ffd700';
   }
-
+  
   function showMedal(){
     console.log('Show Medal On!');
     if(workTime.currentTime >= 21600 && workTime.currentTime < 25200){
