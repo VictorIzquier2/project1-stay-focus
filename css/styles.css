@@ -133,9 +133,14 @@ h1{
   cursor: pointer;
 }
 .fa-user-clock{
-  color:#3f3f3f;
+  color: navy;
   border-radius: 50%;
   box-shadow: 10px 10px 14px 28px rgba(248,248,248,1);
+}
+@media(max-width:640px){
+  .fa-user-clock{
+    box-shadow: 10px 10px 7px 14px rgba(248,248,248,1);
+  }
 }
 .fa-user-astronaut{
   color: orange;
@@ -143,11 +148,21 @@ h1{
   box-shadow: 10px 10px 14px 28px rgba(248,248,248,1);
   display: none;
 }
+@media(max-width:640px){
+  .fa-user-astronaut{
+    box-shadow: 10px 10px 7px 14px rgba(248,248,248,1);
+  }
+}
 .fa-smile{
   color: gold;
   border-radius: 50%;
   box-shadow: 10px 10px 14px 28px rgba(248,248,248,1);
   display: none;
+}
+@media(max-width:640px){
+  .fa-smile{
+    box-shadow: 10px 10px 7px 14px rgba(248,248,248,1);
+  }
 }
 .fa-meh{
   color: darkseagreen;
@@ -155,11 +170,25 @@ h1{
   box-shadow: 10px 10px 14px 28px rgba(248,248,248,1);
   display: none;
 }
+@media(max-width:640px){
+  .fa-meh{
+    box-shadow: 10px 10px 7px 14px rgba(248,248,248,1);
+  }
+}
 .fa-poo{
   color: darkgoldenrod;
   border-radius: 50%;
   box-shadow: 10px 10px 14px 28px rgba(248,248,248,1);
   display: none;
+}
+@media(max-width:640px){
+  .fa-poo{
+    box-shadow: 10px 10px 7px 14px rgba(248,248,248,1);
+  }
+}
+
+#medalOfHonor {
+  font-size: 4.5rem;
 }
 /* Main */
 
@@ -197,6 +226,9 @@ h1{
     height: 30vh;
   }
 }
+#asideLeft #medalOfHonor{
+  display: none;
+}
 #asideLeft > h2 {
   font-size: 12rem;
   margin: 1.5rem auto;
@@ -206,20 +238,25 @@ h1{
   font-size: 2rem;
   margin: 0.5rem;
   color: orange;
+  text-align: center;
   
 }
 @media(max-width: 640px){
   #asideLeft h1{
-    width: 40vw;
-    font-size: 2.5rem;
+    display: none;
   }
   #asideLeft > h2{
     font-size:8rem;
     width: 30vw;
   }
-
+  #asideLeft .stars {
+    display: none;
+  }
   #asideLeft table{
     width: 30vw;
+  }
+  #asideLeft #order {
+    display: none;
   }
 }
 #asideLeft table tbody tr td{
@@ -341,34 +378,44 @@ h1{
   }
 }
 #stall{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 1rem;
   width: 30vw;
 }
 #stall th{
   font-size: 2rem;
-  width: 30vw;
+  width: 100%;
 }
 #stall tbody tr{
   display: flex;
 }
 #stall tbody tr td{
   display: flex;
+  justify-content: center;
   font-size: 2rem;
   width: 15vw;
+  max-width: 12rem;
 }
 #seize{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 1rem;
   width: 30vw;
 }
 #seize th{
-  font-size: 2rem;
   width: 30vw;
+  font-size: 2rem;
 }
 #seize tbody tr{
   display: flex;
 }
 #seize tbody tr td{
   display:flex;
+  justify-content: center;
   font-size: 2rem;
   width: 15vw;
+  max-width: 12rem;
 }

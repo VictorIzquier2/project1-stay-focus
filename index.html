@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/all.css">
+  <link rel="stylesheet" href="./css/all.min.css">
   <link rel="stylesheet" href="./css/styles.css">
   <title>Document</title>
 </head>
@@ -18,13 +18,22 @@
         <i class="fas fa-meh"></i>
         <i class="fas fa-poo"></i>
       </h2>
+      <h3><i id="medalOfHonor" class="fas fa-medal"></i>
+      </h3>
+      <h3 class="stars">
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+      </h3>
       <table>
         <tbody>
-          <tr>
+          <tr id="workingTime">
             <td><i class="far fa-clock"></i></td>
             <td><span id="hourDec">0</span><span id="hourUni">0</span><span>:<span id="minDec">0</span><span id="minUni">0</span><span>:<span id="secDec">0</span><span id="secUni">0</span></td>
           </tr>
-          <tr>
+          <tr id="wastingTime">
             <td><i class="fas fa-hourglass-half"></i></td>
             <td><span id="hourDecWasted">0</span><span id="hourUniWasted">0</span><span>:<span id="minDecWasted">0</span><span id="minUniWasted">0</span><span>:<span id="secDecWasted">0</span><span id="secUniWasted">0</span></td>
           </tr>
@@ -119,9 +128,8 @@
     </aside>
   </div>
 </body>
-<script src="./js/all.js"></script>
+<script src="./js/all.min.js"></script>
 <script src="./js/timing.js"></script>
-<script src="./js/check.js"></script>
 <script src="./js/print.js"></script>
 <script src="./js/windows.js"></script>
 <script src="./js/index.js"></script>

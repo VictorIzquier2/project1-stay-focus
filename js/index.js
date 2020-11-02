@@ -103,32 +103,35 @@ window.onload = () =>{
   const poo = document.querySelector('.fa-poo');
   let slurp = document.getElementById('order');
   
-  // Mostrar el status
-
+  
+  // Print status
+  
   function printStatus(){
+    console.log('Print Status On!')
     if(workTime.currentTime === 0 && wastedTime.currentTime === 0){
       showUser();
     }
-    else if(workTime.currentTime > 3600 && workTime.currentTime > wastedTime.currentTime * 12){
+    else if(workTime.currentTime >= (wastedTime.currentTime * 15)){
       showAstronaut();    
     }
-    else if(workTime.currentTime > wastedTime.currentTime * 12){
+    else if(workTime.currentTime < (wastedTime.currentTime * 15) && workTime.currentTime >= (wastedTime.currentTime * 12)){
       showSmile();
-    }else if(workTime.currenTime <= wastedTime.Time * 12 && workTime.currentTime > wastedTime.currentTime * 4){
+    }else if(workTime.currentTime < (wastedTime.currentTime * 12) && workTime.currentTime >= (wastedTime.currentTime * 6)){
       showMeh();
-    }else if(workTime.currentTime <= wastedTime.currentTime * 4){
+    }else if(workTime.currentTime < (wastedTime.currentTime * 6)){
       showPoo();
     }
   }
+
   // User
   function showUser(){
     smile.style.display = 'none';
     meh.style.display = 'none';
     poo.style.display = 'none';
-    astronaut.stle.display = 'none';
+    astronaut.style.display = 'none';
     user.style.display = 'block';
   }
-
+  
   // astronaut
   function showAstronaut(){
     user.style.display = 'none';
@@ -136,7 +139,7 @@ window.onload = () =>{
     meh.style.display = 'none';
     poo.style.display = 'none';
     astronaut.style.display = 'block';
-    slurp.innerText = "exploring the unknown..";
+    slurp.innerText = "exploring the unknown...";
   }
   // Smile
   function showSmile(){
@@ -156,7 +159,7 @@ window.onload = () =>{
     meh.style.display = 'block';
     slurp.innerText = "let's go!";
   }
-
+  
   // Poo
   function showPoo(){
     user.style.display = 'none';
@@ -166,15 +169,79 @@ window.onload = () =>{
     poo.style.display = 'block';
     slurp.innerText = "being in the shit!";
   }
+  
+  // Clasification
+  const stars = document.querySelectorAll('.fa-star');
+  const star1 = stars[4];
+  const star2 = stars[3];
+  const star3 = stars[2];
+  const star4 = stars[1];
+  const star5 = stars[0];
+  
+    
+  // Stars
+  function getStar(star){
+    star.classList.remove('far');
+    star.classList.add('fas');
+  }
+  function showClasification(){
+    if(workTime.currentTime >= 3600 && workTime.currentTime < 7200){
+      getStar(star1);
+    }
+    if(workTime.currentTime >= 7200 && workTime.currentTime < 10800){
+      getStar(star2);
+    }
+    if(workTime.currentTime >= 10800 && workTime.currentTime < 14400){
+      getStar(star3);
+    }
+    if(workTime.currentTime >= 14400 && workTime.currentTime < 18000){
+      getStar(star4);
+    }if(workTime.currenTime >= 18000 && workTime.currentTime < 21600){
+      getStar(star5);
+    }
+  }
+  function hiddenStars(){
+    const allStars = document.querySelector('.stars');
+    allStars.style.display = 'none';
+  }
+
+  // Medal of Honor
+  const medal = document.querySelector('#medalOfHonor');
+  
+  
+  function showBronzeMedal(){
+    medal.style.display = 'block';
+    medal.style.color = '#d2691e';
+  }
+  function showSilverMedal(){
+    medal.style.color = '#c0c0c0';
+  }
+  function showGoldMedal(){
+    medal.style.color = '#ffd700';
+  }
+
+  function showMedal(){
+    console.log('Show Medal On!');
+    if(workTime.currentTime >= 21600 && workTime.currentTime < 25200){
+      hiddenStars();
+      showBronzeMedal();
+    }else if(workTime.currentTime >= 25200 && workTime.currentTime < 28800){
+      showSilverMedal();
+    }else if(workTime.currentTime >= 28800 && workTime.currentTime < 50000){
+      showGoldMedal();
+    }
+  }
 
   // Event Focus
-
+  
   window.addEventListener('focus', () =>{
     workTime.stopTiming();
     wastedTime.stopTiming();
     printStatus();
+    showClasification();
+    showMedal();
   });
-
+  
   // Event Blur
   
   window.addEventListener('blur', () =>{
@@ -188,6 +255,8 @@ window.onload = () =>{
       wastedTime.startTiming(printWastedTime);
       }
       printStatus();
+      showClasification();
+      showMedal();
   });
 
   // Event pageshow
@@ -304,5 +373,7 @@ window.onload = () =>{
       quitLinkedin.style.display = 'none';
     });
     printStatus();
+    showClasification();
+    showMedal();
   });
 }

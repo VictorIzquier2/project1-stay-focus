@@ -14,10 +14,10 @@ class Timing{
     return Math.floor(this.currentTime / 3600);
   }
   getMinutes(){
-    return Math.floor(this.currentTime / 60);
+      return Math.floor(this.currentTime / 60) % 60;
   }
   getSeconds(){
-    return this.currentTime - this.getMinutes() * 60;
+    return this.currentTime % 60;
   }
   twoDigitsNumber(number) {
     // ... your code goes here
