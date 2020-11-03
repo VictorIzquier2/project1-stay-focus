@@ -47,8 +47,8 @@
   // Imprimir minutos en twitter
  
   function printTwitterMin(){
-    minUniTwit.innerText = twitterTime.twoDigitsNumber(facebookTime.getMinutes())[1];
-    minDecTwit.innerText = twitterTime.twoDigitsNumber(facebookTime.getMinutes())[0];
+    minUniTwit.innerText = twitterTime.twoDigitsNumber(twitterTime.getMinutes())[1];
+    minDecTwit.innerText = twitterTime.twoDigitsNumber(twitterTime.getMinutes())[0];
   }
 
   // Imprimir minutos en instagram

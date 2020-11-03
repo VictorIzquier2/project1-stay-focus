@@ -1,5 +1,5 @@
 function openFacebook(){
-  openedFacebook = window.open('https://www.facebook.com', 'facebook', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes');
+  openedFacebook = window.open('https://www.facebook.com', 'facebook', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes, location=yes');
     return openedFacebook;
 }
 function closeFacebook(){
@@ -41,7 +41,7 @@ function closeInstagram(){
 }
 
 function openYoutube(){
-  openedYoutube = window.open('https://www.youtube.com', 'youtube', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes');
+  openedYoutube = window.open('https://www.youtube.com', 'youtube', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes, location=yes');
     return openedYoutube;
 }
 function closeYoutube(){
