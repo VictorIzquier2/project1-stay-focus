@@ -101,13 +101,11 @@ window.onload = () =>{
   const smile = document.querySelector('.fa-smile');
   const meh = document.querySelector('.fa-meh');
   const poo = document.querySelector('.fa-poo');
-  let slurp = document.getElementById('order');
-  
+  const slurp = document.querySelector('#order');
   
   // Print status
   
   function printStatus(){
-    console.log('Print Status On!')
     if(workTime.currentTime === 0 && wastedTime.currentTime === 0){
       showUser();
     }
@@ -125,11 +123,12 @@ window.onload = () =>{
 
   // User
   function showUser(){
+    astronaut.style.display = 'none';
     smile.style.display = 'none';
     meh.style.display = 'none';
     poo.style.display = 'none';
-    astronaut.style.display = 'none';
     user.style.display = 'block';
+    slurp.innerText = "time to Start";
   }
   
   // astronaut
@@ -208,7 +207,6 @@ window.onload = () =>{
   
   // Medal of Honor
   const medal = document.querySelector('#medalOfHonor');
-  const award = document.querySelector('#award');
   
   
   function showBronzeMedal(){
@@ -223,7 +221,6 @@ window.onload = () =>{
   }
   
   function showMedal(){
-    console.log('Show Medal On!');
     if(workTime.currentTime >= 21600 && workTime.currentTime < 25200){
       hiddenStars();
       showBronzeMedal();

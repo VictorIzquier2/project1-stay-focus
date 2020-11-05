@@ -1,5 +1,8 @@
 function openFacebook(){
   openedFacebook = window.open('https://www.facebook.com', 'facebook', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes, location=yes');
+  wastedTime.stopTiming();
+  wastedTime.startTiming();
+  workTime.stopTiming();
     return openedFacebook;
 }
 function closeFacebook(){
@@ -13,7 +16,10 @@ function closeFacebook(){
 }
 
 function openTwitter(){
-  openedTwitter = window.open('https://www.twitter.com', 'twitter', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes');
+  openedTwitter = window.open('https://www.twitter.com', 'twitter', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes, location=yes');
+  wastedTime.stopTiming();
+  wastedTime.startTiming();
+  workTime.stopTiming();
   return openedTwitter;
 }
 function closeTwitter(){
@@ -27,7 +33,10 @@ function closeTwitter(){
 }
 
 function openInstagram(){
-  openedInstagram = window.open('https://www.instagram.com', 'instagram', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes');
+  openedInstagram = window.open('https://www.instagram.com', 'instagram', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes, location=yes');
+  wastedTime.stopTiming();
+  wastedTime.startTiming();
+  workTime.stopTiming();
     return openedInstagram;
 }
 function closeInstagram(){
@@ -42,6 +51,9 @@ function closeInstagram(){
 
 function openYoutube(){
   openedYoutube = window.open('https://www.youtube.com', 'youtube', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes, location=yes');
+  wastedTime.stopTiming();
+  wastedTime.startTiming();
+  workTime.stopTiming();
     return openedYoutube;
 }
 function closeYoutube(){
@@ -55,7 +67,10 @@ function closeYoutube(){
 }
 
 function openTiktok(){
-  openedTiktok = window.open('https://www.tiktok.com', 'tiktok', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes');
+  openedTiktok = window.open('https://www.tiktok.com', 'tiktok', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes, location=yes');
+  wastedTime.stopTiming();
+  wastedTime.startTiming();
+  workTime.stopTiming();
     return openedTiktok;
 }
 function closeTiktok(){
@@ -69,7 +84,7 @@ function closeTiktok(){
 }
 
 function openCode(){
-  openedCode = window.open('https://repl.it/', 'repl', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes');
+  openedCode = window.open('https://repl.it/', 'repl', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes, location=yes');
     return openedCode;
 }
 function closeCode(){
@@ -80,7 +95,7 @@ function closeCode(){
   }
 }
 function openGithub(){
-  openedGithub = window.open('https://www.github.com', 'facebook', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes');
+  openedGithub = window.open('https://www.github.com', 'facebook', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes, location=yes');
     return openedGithub;
 }
 function closeGithub(){
@@ -91,7 +106,7 @@ function closeGithub(){
   }
 }
 function openCodepen(){
-  openedCodepen = window.open('https://www.codepen.io', 'facebook', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes');
+  openedCodepen = window.open('https://www.codepen.io', 'facebook', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes, location=yes');
     return openedCodepen;
 }
 function closeCodepen(){
@@ -102,7 +117,7 @@ function closeCodepen(){
   }
 }
 function openFigma(){
-  openedFigma = window.open('https://www.figma.com', 'facebook', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes');
+  openedFigma = window.open('https://www.figma.com', 'facebook', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes,location=yes');
     return openedFigma;
 }
 function closeFigma(){
@@ -113,7 +128,7 @@ function closeFigma(){
   }
 }
 function openLinkedin(){
-  openedLinkedin = window.open('https://www.linkedin.com', 'facebook', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes');
+  openedLinkedin = window.open('https://www.linkedin.com', 'facebook', 'toolbar=yes, titlebar=yes, menubar=yes, scrollbars=yes, resizable=yes, location=yes');
     return openedLinkedin;
 }
 function closeLinkedin(){

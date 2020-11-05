@@ -11,7 +11,7 @@ class Timing{
   }
 
   getHours(){
-    return Math.floor(this.currentTime / 3600);
+    return Math.floor(this.currentTime / 3600) % 24;
   }
   getMinutes(){
       return Math.floor(this.currentTime / 60) % 60;

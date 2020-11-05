@@ -7,6 +7,10 @@
 
 html,
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -128,6 +132,7 @@ h1{
 .fa-times-circle{
   display: none;
   color: red;
+  margin: 0 0.5rem;
 }
 .fa-times-circle:hover{
   cursor: pointer;
@@ -198,7 +203,7 @@ h1{
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 @media(max-width:640px){
@@ -207,12 +212,12 @@ h1{
     justify-content: center;
     align-items: center;
     margin: 3rem 1rem;
-    height: 85vh;
+    height: 100vh;
   }
 }
 
 #asideLeft{
-  align-self: baseline;
+  align-self: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -224,7 +229,12 @@ h1{
     align-self: center;
     flex-direction: row;
     width: 90%;
-    height: 30vh;
+    height: 20vh;
+  }
+}
+@media(max-height: 640px){
+  #asideLeft{
+    align-self: flex-start;
   }
 }
 #asideLeft #medalOfHonor{
@@ -260,6 +270,23 @@ h1{
     display: none;
   }
 }
+@media(max-height: 640px){
+  #asideLeft > h2 {
+    font-size: 8rem;
+    margin: 0 auto;
+  }
+}
+@media(max-height: 480px){
+  #asideLeft h1 {
+    margin: 1rem auto;
+  }
+  #asideLeft > h2 {
+    font-size: 6rem;
+  }
+  #order {
+    display: none;
+  }
+}
 #asideLeft table tbody tr td{
   font-size: 2rem;
   text-align: center;
@@ -279,6 +306,7 @@ h1{
 @media(max-width: 640px){
   #main{
     transform: rotate(90deg);
+    width: 25vw;
   }
 }
 #main img {
@@ -376,6 +404,7 @@ h1{
   #asideRight{
     flex-direction: row;
     width: 67%;
+    height: 50vh;
   }
 }
 #stall{
@@ -384,6 +413,13 @@ h1{
   align-items: center;
   margin: 1rem;
   width: 30vw;
+  height: 40vh;
+}
+@media(max-height: 480px){
+  #stall {
+    height: 67vh;
+    align-self: center;
+  }
 }
 #stall th{
   font-size: 2rem;
@@ -399,12 +435,33 @@ h1{
   width: 15vw;
   max-width: 12rem;
 }
+@media(min-width: 640px){
+  #stall tbody tr td{
+    font-size: 2.5rem;
+  }
+}
+@media(min-width: 992px){
+  #stall tbody tr td{
+    font-size: 3rem;
+  }
+}
+@media(max-height: 640px){
+  #stall tbody tr td{
+    font-size: 2rem;
+  }
+}
 #seize{
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 1rem;
   width: 30vw;
+  height: 40vh;
+}
+@media(max-height: 480px){
+  #seize {
+    display: none;
+  }
 }
 #seize th{
   width: 30vw;
@@ -419,4 +476,19 @@ h1{
   font-size: 2rem;
   width: 15vw;
   max-width: 12rem;
+}
+@media(min-width: 640px){
+  #seize tbody tr td{
+    font-size: 2.5rem;
+  }
+}
+@media(min-width: 992px){
+  #seize tbody tr td{
+    font-size: 3rem;
+  }
+}
+@media(max-height: 640px){
+  #seize tbody tr td{
+    font-size: 2rem;
+  }
 }
